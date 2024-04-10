@@ -1,0 +1,92 @@
+
+/* import google fonts api  */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
+
+@import url('href=https://fonts.googleapis.com/css?family=Tangerine');
+
+/* resetting default styles and settings fonts */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Tangerine", serif;
+
+}
+body{
+    background: #000;
+}
+
+/* styling wrapper */
+.wrapper {
+position: relative;
+margin: 10px;
+height: 80px;
+max-width: auto;
+background-color: #ecf0f1;
+border-radius: 17px;
+box-shadow: 3px 7px 2px rgb(0, 0, 0, 0.1);}
+.wrapper ul{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.wrapper ul li{
+    list-style-type: none;
+    position: relative;
+    list-style: none;
+    line-height: 85px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 620px;
+
+}
+
+
+/* styling tooltip */
+.tooltip{
+    position: absolute;
+    left: 0;
+    top: -5px;
+    height: 30px;
+    width: 100px;
+    background: #29fd53;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    left: 0.05em;
+
+    color: #000; 
+    font-weight: 500;
+    pointer-events: none;
+    margin: 0 10px;
+    transition: 0.5s;
+    border: 1px solid #000;
+    opacity: 0;
+
+}
+.tooltip::before ::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -10px 0 0 #222327;
+}
+
+.wrapper ul li:hover .tooltip{
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+.wrapper ul li a {
+    display: block;
+    color: #000;
+    font-size: 1.5em;
+    margin: 0 50px;
+}
